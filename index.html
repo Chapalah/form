@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230918013153">
+  <title>Form</title>
+</head>
+
+
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <form class="form">
+          <div class="form__wrapper">
+            <div class="form__header">
+              <div class="form__steps">
+                <span class="js-current-step">1</span>
+                <span>/</span>
+                <span class="js-steps">3</span>
+              </div>
+            </div>
+
+            <div class="form__step" data-step="1">
+              <div class="form__field">
+                <h2>Возраст</h2>
+
+                <div class="form__value">
+                  <span class="js-range-value">27 лет</span>
+                </div>
+
+                <input type="range" name="age" min="18" max="35" class="form__range">
+
+                <div class="form__age">
+                  <span>18 лет</span>
+                  <span>35 лет</span>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <h2>Пол</h2>
+                <div class="form__group">
+                  <div class="form__item form__item--row">
+                    <input type="radio" class="form__radio" name="sex" id="male">
+                    <label for="male">мужчина</label>
+                  </div>
+                  <div class="form__item form__item--row">
+                    <input type="radio" class="form__radio" name="sex" id="female">
+                    <label for="female">женщина</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__step form__step--hidden" data-step="2">
+              <div class="form__field">
+                <h2>Город</h2>
+
+                <div class="form__item">
+                  <select name="town" id="town">
+                    <option value="" selected="selected" disabled="disabled"></option>
+                    <option value="Гродно">Гродно</option>
+                    <option value="Витебск">Витебск</option>
+                    <option value="Могилев">Могилев</option>
+                    <option value="Гомель">Гомель</option>
+                    <option value="Брест">Брест</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <h2>Сообщение</h2>
+
+                <div class="form__item">
+                  <textarea name="message" id="message"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__step form__step--hidden" data-step="3">
+              <div class="form__field">
+                <h2>Имя</h2>
+
+                <div class="form__item">
+                  <input type="text" name="name" id="name">
+                </div>
+              </div>
+
+              <div class="form__field">
+                <h2>Телефон</h2>
+
+                <div class="form__item">
+                  <input type="tel" name="tel" id="tel" data-inputmask="'mask': '+7(###)###-##-##'">
+                </div>
+              </div>
+
+              <div class="form__field">
+                <div class="form__item form__item--row">
+                  <input type="checkbox" name="policy" id="policy">
+                  <label for="policy">Я согласен с политикой конфиденциальности</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__buttons">
+              <div class="button button--hidden button-wrap">
+                Назад
+                <button type="button" class="button button--secondary js-step-prev">
+                  Назад
+                </button>
+              </div>
+              <button type="button" disabled="disabled" class="button button--primary js-step-next">
+                Далее
+              </button>
+              <button type="submit" disabled="disabled" class="button button--hidden button--loader button--primary js-form-submit">
+                <div class="button-preloader">
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.5 2.5625C20.8398 2.5625 21.1657 2.69749 21.406 2.93777C21.6463 3.17805 21.7812 3.50394 21.7812 3.84375V11.5312C21.7812 11.8711 21.6463 12.1969 21.406 12.4372C21.1657 12.6775 20.8398 12.8125 20.5 12.8125C20.1602 12.8125 19.8343 12.6775 19.594 12.4372C19.3537 12.1969 19.2188 11.8711 19.2188 11.5312V3.84375C19.2188 3.50394 19.3537 3.17805 19.594 2.93777C19.8343 2.69749 20.1602 2.5625 20.5 2.5625ZM20.5 28.1875C20.8398 28.1875 21.1657 28.3225 21.406 28.5628C21.6463 28.803 21.7812 29.1289 21.7812 29.4688V37.1562C21.7812 37.4961 21.6463 37.8219 21.406 38.0622C21.1657 38.3025 20.8398 38.4375 20.5 38.4375C20.1602 38.4375 19.8343 38.3025 19.594 38.0622C19.3537 37.8219 19.2188 37.4961 19.2188 37.1562V29.4688C19.2188 29.1289 19.3537 28.803 19.594 28.5628C19.8343 28.3225 20.1602 28.1875 20.5 28.1875ZM38.4375 20.5C38.4375 20.8398 38.3025 21.1657 38.0622 21.406C37.8219 21.6463 37.4961 21.7812 37.1562 21.7812H29.4688C29.1289 21.7812 28.803 21.6463 28.5628 21.406C28.3225 21.1657 28.1875 20.8398 28.1875 20.5C28.1875 20.1602 28.3225 19.8343 28.5628 19.594C28.803 19.3537 29.1289 19.2188 29.4688 19.2188H37.1562C37.4961 19.2188 37.8219 19.3537 38.0622 19.594C38.3025 19.8343 38.4375 20.1602 38.4375 20.5ZM12.8125 20.5C12.8125 20.8398 12.6775 21.1657 12.4372 21.406C12.1969 21.6463 11.8711 21.7812 11.5312 21.7812H3.84375C3.50394 21.7812 3.17805 21.6463 2.93777 21.406C2.69749 21.1657 2.5625 20.8398 2.5625 20.5C2.5625 20.1602 2.69749 19.8343 2.93777 19.594C3.17805 19.3537 3.50394 19.2188 3.84375 19.2188H11.5312C11.8711 19.2188 12.1969 19.3537 12.4372 19.594C12.6775 19.8343 12.8125 20.1602 12.8125 20.5ZM7.81562 7.81562C8.05589 7.57543 8.38173 7.44049 8.72147 7.44049C9.06121 7.44049 9.38704 7.57543 9.62731 7.81562L15.0675 13.2533C15.3009 13.4949 15.43 13.8185 15.4271 14.1545C15.4242 14.4904 15.2894 14.8118 15.0519 15.0493C14.8143 15.2869 14.493 15.4216 14.157 15.4246C13.8211 15.4275 13.4975 15.2983 13.2558 15.0649L7.81562 9.62731C7.57543 9.38704 7.44049 9.06121 7.44049 8.72147C7.44049 8.38173 7.57543 8.05589 7.81562 7.81562ZM25.9351 25.9351C26.1753 25.6949 26.5012 25.5599 26.8409 25.5599C27.1806 25.5599 27.5065 25.6949 27.7467 25.9351L33.1844 31.3727C33.4178 31.6143 33.5469 31.938 33.544 32.2739C33.5411 32.6099 33.4063 32.9312 33.1688 33.1688C32.9312 33.4063 32.6099 33.5411 32.2739 33.544C31.938 33.5469 31.6143 33.4178 31.3727 33.1844L25.9351 27.7467C25.6949 27.5065 25.5599 27.1806 25.5599 26.8409C25.5599 26.5012 25.6949 26.1753 25.9351 25.9351ZM33.1844 7.81819C33.4238 8.05835 33.5582 8.38364 33.5582 8.72275C33.5582 9.06186 33.4238 9.38715 33.1844 9.62731L27.7467 15.0675C27.5051 15.3009 27.1815 15.43 26.8455 15.4271C26.5096 15.4242 26.1882 15.2894 25.9507 15.0519C25.7131 14.8143 25.5784 14.493 25.5754 14.157C25.5725 13.8211 25.7017 13.4975 25.9351 13.2558L31.3727 7.81819C31.613 7.57799 31.9388 7.44306 32.2785 7.44306C32.6183 7.44306 32.9441 7.57799 33.1844 7.81819ZM15.0649 25.9351C15.3051 26.1753 15.4401 26.5012 15.4401 26.8409C15.4401 27.1806 15.3051 27.5065 15.0649 27.7467L9.62731 33.1844C9.38567 33.4178 9.06202 33.5469 8.72608 33.544C8.39014 33.5411 8.06879 33.4063 7.83123 33.1688C7.59368 32.9312 7.45893 32.6099 7.45601 32.2739C7.45309 31.938 7.58223 31.6143 7.81562 31.3727L13.2533 25.9351C13.4935 25.6949 13.8194 25.5599 14.1591 25.5599C14.4988 25.5599 14.8247 25.6949 15.0649 25.9351Z" fill="white"/>
+                  </svg>
+                </div>
+                Отправить заявку
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/app.min.js?_v=20230918013153"></script>
+  </body>
+</html>
