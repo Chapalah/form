@@ -44,7 +44,6 @@
       }
     }
 
-    
     @media (max-width: 425px) {
       top: 24px;
     }
@@ -53,6 +52,10 @@
   &__step {
     margin-top: 20px;
     position: relative;
+
+    @media (max-width: 425px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__range {
@@ -128,7 +131,7 @@
         position: relative;
         z-index: 2;
         appearance: none;
-        
+
         &::before {
           width: 18px;
           height: 18px;
