@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: $primaryTextColor;
+  font-size: $fontSize + px;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  line-height: 1;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+button,
+a {
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}

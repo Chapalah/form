@@ -1,0 +1,34 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+@import 'config/fonts';
+@import 'config/vars';
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/reset';
+@import 'config/animations';
+@import 'config/base';
+
+@import 'components/button';
+@import 'components/customSelect';
+@import 'components/modal';
+@import 'components/form';
+
+body {
+  background-image: url('../images/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+  }
+}

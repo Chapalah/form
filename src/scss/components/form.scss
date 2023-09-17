@@ -1,0 +1,251 @@
+.form {
+  max-width: 100%;
+  border-radius: 60px;
+  background: #ffffff;
+  box-shadow: $shadow;
+
+  @media (max-width: 425px) {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: none;
+    width: 100svw;
+    height: 100svh;
+  }
+
+  &__wrapper {
+    padding: 80px 160px 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      padding: 80px 25px 100px;
+    }
+
+    @media (max-width: 425px) {
+      padding: 30px 16px 50px;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  &__steps {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    span {
+      &:first-child {
+        color: #3d46fa;
+      }
+    }
+
+    
+    @media (max-width: 425px) {
+      top: 24px;
+    }
+  }
+
+  &__step {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  &__range {
+    margin-top: 25px;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #4333ff 0%, #07ffd2 92.98%);
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-image: url('../images/Ellipse.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+
+  &__value {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__age {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__field {
+    &:not(:first-child) {
+      margin-top: clamp(25px, 7vw, 50px);
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-top: 30px;
+
+    input:not([type='checkbox']):not([type='radio']),
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e3e3e3;
+      background-color: #ffffff;
+      box-shadow: $shadow;
+      padding: 15px 25px;
+    }
+
+    input {
+      &[type='checkbox'] {
+        min-width: 18px;
+        height: 18px;
+        position: relative;
+        z-index: 2;
+        appearance: none;
+        
+        &::before {
+          width: 18px;
+          height: 18px;
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: url('../images/checkbox.svg');
+          z-index: 1;
+        }
+
+        &:checked {
+          appearance: none;
+          &::before {
+            background: url('../images/checkbox-checked.svg');
+          }
+        }
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 140px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &--row {
+      flex-direction: row;
+
+      label {
+        margin-left: 5px;
+      }
+    }
+
+    p {
+      color: #ff6565;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    label {
+      transition: $defaultTransition;
+      user-select: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $primaryGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &--error {
+      textarea {
+        border: 1px solid #ff6565;
+      }
+    }
+  }
+
+  &__group {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 90px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 17px;
+    }
+
+    .form__item {
+      width: initial;
+    }
+  }
+
+  &__radio {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    background-image: url('../images/radio.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    &:checked {
+      background-image: url('../images/radio-checked.svg');
+    }
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width: 425px) {
+      margin-top: auto;
+      flex-direction: column-reverse;
+
+      .button {
+        width: 100%;
+
+        &--secondary {
+          width: 99%;
+        }
+      }
+    }
+  }
+}

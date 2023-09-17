@@ -1,0 +1,89 @@
+.button {
+  height: 70px;
+  cursor: pointer;
+  padding: 0px 97px;
+  border-radius: 100px;
+  transition: $defaultTransition;
+
+  &--loader {
+    display: flex;
+    align-items: center;
+  }
+
+  &--primary {
+    border-radius: 100px;
+    background: linear-gradient(90deg, #4333ff 0%, #07ffd2 92.98%);
+    box-shadow: $shadow;
+    color: $lightTextColor;
+    font-weight: 700;
+    line-height: 120%;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #7e73ff 0%, #07ffd2 92.98%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: $primaryColor;
+      color: $lightTextColor;
+      pointer-events: none;
+    }
+
+    &.button--disabled {
+      background: linear-gradient(90deg, #b2abff 0%, #51ffe0 92.98%);
+      cursor: default;
+    }
+  }
+
+  &--secondary {
+    background: rgba(67, 51, 255, 0);
+    color: $primaryTextColor;
+    position: absolute;
+    border-radius: 100px;
+    background-color: #ffffff;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 3px;
+    z-index: 1;
+    font-weight: 700;
+    line-height: 120%;
+    height: 65px;
+
+    &:hover,
+    &:focus {
+      color: $secondaryTextColor;
+    }
+  }
+
+  &--loading {
+    pointer-events: none;
+
+    .button-preloader {
+      display: block;
+    }
+  }
+}
+
+.button-wrap {
+  position: relative;
+  background: linear-gradient(90deg, #07ffd2, #413bfd 92.98%);
+  border-radius: 100px;
+  z-index: 2;
+  color: transparent;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #07ffd2 0%, #7e73ff 92.98%);
+  }
+}
+
+.button-preloader {
+  display: none;
+  margin-right: 2px;
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}

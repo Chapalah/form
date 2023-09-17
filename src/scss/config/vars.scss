@@ -1,0 +1,42 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1160; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1130; // ширина контейнера из макета
+
+$mainOffset: 15; // отступы безопасности для контейнера
+$mainFont: 'Inter'; // !указать здесь основное семейство шрифта
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+
+$primaryGradient: linear-gradient(90deg, #4333FF 0%, #07FFD2 92.98%);
+
+$mainRadius: rem(10);
+
+$primaryColor: #194EDC;
+
+$primaryBgColor: #ffffff;
+$secondaryBgColor: #F4F7FF;
+
+$primaryBorderColor: #D9D9D9;
+
+$primaryTextColor: #353535;
+$lightTextColor: #ffffff;
+$secondaryTextColor: #3D46FA;
+
+$shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.10);
+
+$defaultTransition: all .3s ease-in-out;
+
+$defaultBorderRadius: 15px;
+
+$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontSize: 24; // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+
+body {
+  --headerHeight: 100px;
+
+  @media (max-width: 767px) {
+    --headerHeight: 80px;
+  }
+}
