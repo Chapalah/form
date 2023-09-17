@@ -215,5 +215,5 @@ submitButton.addEventListener('click', (event) => {
   </button>`);
 
     ininModalEvents();
-  }, 999999);
+  }, 2500);
 });
